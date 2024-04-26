@@ -8,7 +8,7 @@ const CustomLink = ({ href, title, className = "" }) => {
   return (
     <Link href={href} className={`${className} relative group`}>
       {title}
-      <span className='h-[1px] inline-block w-0 bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-width ease duration-300'>&nbsp;</span>
+      <span className={`h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-width ease duration-300 ${router.asPath === href ? 'w-full' : 'w-0'}`}>&nbsp;</span>
     </Link>
   );
 };
@@ -24,10 +24,10 @@ const NavBar = () => {
       </nav>
       
       <nav>
-        <Link href="/">Twitter</Link>
-        <Link href="/">Twitter</Link>
-        <Link href="/">Twitter</Link>
-        <Link href="/">Twitter</Link>
+        <CustomLink href="/" title="Twitter" className='mr-4'/>
+        <CustomLink href="/" title="Twitter" className='mx-4'/>
+        <CustomLink href="/" title="Twitter" className='mx-4'/>
+        <CustomLink href="/" title="Twitter" className='ml-4'/>
       </nav>
       <div className='absolute left-[50%] top-2 translate-x-[-50%]'>
         <Logo />
