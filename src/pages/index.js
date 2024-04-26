@@ -1,7 +1,8 @@
 import Layout from '@/components/Layout';
 import Head from 'next/head';
 import Image from 'next/image';
-import profilePic from "../../public/images/profile/Aradhana1.jpg";
+import profilePic from "../../public/images/profile/Aradz1.png";
+import AnimatedText from '@/components/AnimatedText';
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
             </div>
             <div>
               <h1>Turning Vision Into Reality With Code And Design.</h1>
+              <AnimatedText />
               <p>
               As a skilled UI UX Designer, I am dedicated to turning ideas into innovative web design applications. 
 Explore my latest projects and articles, showcasing my expertise in Figma and Illustration.
